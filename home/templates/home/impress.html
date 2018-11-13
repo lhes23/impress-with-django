@@ -1,0 +1,11 @@
+{% extends 'home/impress_base.html' %}
+{% block content %}
+<div id="impress" data-autoplay="0">
+{% for x in slide %}
+    <div id="{{x.name}}{{x.id}}" class="step {{x.name}}" data-x="{{x.dataX}}" data-y="{{x.dataY}}" data-z="{{x.dataZ}}" data-rotate-x="{{x.dataRotateX}}" data-rotate-y="{{x.dataRotateY}}" data-rotate-z="{{x.dataRotateZ}}" data-scale="{{x.dataScale}}">
+        {{x.message | safe}}
+    </div>
+{% endfor %}
+<div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="100"></div>
+</div>
+{% endblock %}

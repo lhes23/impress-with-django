@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<h1>This is the Insert Slide</h1>
+<form method="POST">
+	{% csrf_token %}
+	{{form}}
+	<input type="submit" value="Submit">
+</form>
+<script>
+	CKEDITOR.replace('id_message')
+</script>
+{% endblock %}
