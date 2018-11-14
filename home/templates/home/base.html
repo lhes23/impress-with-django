@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My Django Project 1</title>
-	<script src="{% static 'js/ckeditor/ckeditor.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	
 </head>
 <body>
 	<ul>
@@ -15,5 +16,7 @@
 	</ul>
 	{% block content %}
 	{% endblock %}
+	<script src="{% static 'js/ckeditor/ckeditor.js' %}"></script>
+	<script sr="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
